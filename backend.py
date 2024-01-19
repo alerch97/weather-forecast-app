@@ -3,9 +3,10 @@ import os
 
 # secured api key in local env variable
 API_KEY = os.environ.get("WEATHER_API")
+UNIT = "metric"
 
 def get_data(place, forecast_days=None):
-    url = f"http://api.openweathermap.org/data/2.5/forecast?q={place}&appid={API_KEY}"
+    url = f"http://api.openweathermap.org/data/2.5/forecast?q={place}&units={UNIT}&appid={API_KEY}"
     response = requests.get(url)
     data = response.json()
     filtered_data = data["list"]
