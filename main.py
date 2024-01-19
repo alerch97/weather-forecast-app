@@ -30,9 +30,10 @@ if place:
                           "Snow": "images/snow.png"}
                 # Filter data again
                 sky_conditions = [dict["weather"][0]["main"] for dict in filtered_data]
-                # Create sky conditions plot
+                # Create sky conditions plot with dates
+                dates = [dict["dt_txt"] for dict in filtered_data]
                 image_paths = [images[condition] for condition in sky_conditions]
-                st.image(image_paths, width=115)
+                st.image(image_paths, caption=dates, width=115)
     except KeyError:
         st.warning('This place does not exist!, maybe you have a typo!', icon="⚠️")
 
