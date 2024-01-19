@@ -1,5 +1,5 @@
 # Web-App for Weather Forecasting
-This little Web-App uses current weather forecast data from https://openweathermap.org/ . The free version
+This little Web-App uses current weather forecast data from https://openweathermap.org/ . From the free version API you can get 5 days forecast with a 3-hour step.
 You can type in a city/place, choose the number of forecasting days and change between a temperature plot or the forecast of the sky conditions.
 
 Clone the repo, get a personal API_KEY from OpenWeatherMap, save it on your computer as a environment variable under "WEATHER_API" and start the web app by typing this command in the terminal:
